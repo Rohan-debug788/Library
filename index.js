@@ -1,6 +1,6 @@
 // Fetch all books from the server (db.json)
 async function fetchBooks() {
-    const response = await fetch('http://localhost:3000/books');
+    const response = await fetch('https://library-wbg7.onrender.com/books');
     const books = await response.json();
     return books;
 }
@@ -35,7 +35,7 @@ async function displayBooks() {
 
 // Add a new book
 async function addNewBook(book) {
-    await fetch('http://localhost:3000/books', {
+    await fetch('https://library-wbg7.onrender.com/books', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ async function borrowBook(bookId) {
     if (!borrowerName) return; // If no name entered, do nothing
 
     // Fetch the book by ID and update its data
-    const response = await fetch(`http://localhost:3000/books/${bookId}`);
+    const response = await fetch(`https://library-wbg7.onrender.com/books/${bookId}`);
     const book = await response.json();
 
     book.borrowed = true;
@@ -125,7 +125,7 @@ async function borrowBook(bookId) {
     book.borrowDate = new Date().toLocaleDateString(); // Borrow date as the current date
 
     // Send updated book data to the server
-    await fetch(`http://localhost:3000/books/${bookId}`, {
+    await fetch(`https://library-wbg7.onrender.com/books/${bookId}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ async function borrowBook(bookId) {
 // Return a borrowed book
 async function returnBook(bookId) {
     // Fetch the book by ID and update its data
-    const response = await fetch(`http://localhost:3000/books/${bookId}`);
+    const response = await fetch(`https://library-wbg7.onrender.com/books/${bookId}`);
     const book = await response.json();
 
     book.borrowed = false;
@@ -147,7 +147,7 @@ async function returnBook(bookId) {
     book.borrowDate = null;
 
     // Send updated book data to the server
-    await fetch(`http://localhost:3000/books/${bookId}`, {
+    await fetch(`https://library-wbg7.onrender.com/books/${bookId}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -160,7 +160,7 @@ async function returnBook(bookId) {
 
 // Delete a book
 async function deleteBook(bookId) {
-    await fetch(`http://localhost:3000/books/${bookId}`, {
+    await fetch(`https://library-wbg7.onrender.com/books/${bookId}`, {
         method: 'DELETE',
     });
 
