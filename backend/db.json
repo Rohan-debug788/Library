@@ -1,0 +1,52 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "type": "Fiction",
+      "borrowed": false,
+      "borrowerName": null,
+      "borrowDate": null,
+      "borrowCount": 0
+    },
+    {
+      "id": "3",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "type": "Classic",
+      "borrowed": false,
+      "borrowerName": null,
+      "borrowDate": null,
+      "borrowCount": 0
+    },
+    {
+      "id": "4",
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "type": "Adventure",
+      "borrowed": false,
+      "borrowerName": null,
+      "borrowDate": null,
+      "borrowCount": 0
+    },
+    {
+      "id": "b3db",
+      "title": "comp",
+      "author": "Hamida",
+      "type": "Dystopian",
+      "borrowed": false,
+      "borrowerName": null,
+      "borrowDate": null
+    },
+    {
+      "title": "sad",
+      "author": "me",
+      "type": "Classic",
+      "borrowed": false,
+      "borrowerName": null,
+      "borrowDate": null,
+      "id": "w0evM5H"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body class="m-4">
+    <!--navigation bar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Book Library</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Search form -->
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" id="searchInput" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            
+        </div>
+    </nav>
+
+    <!-- Main container -->
+    <div class="container my-3">
+        <h1>Manage Library</h1>
+        <hr>
+    </div>
+
+    <!-- Form section -->
+    <form id="libraryForm">
+        <div class="form-group row">
+            <label for="inputBook3" class="col-sm-2 col-form-label">Book Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputBook3" placeholder="Enter Book Name">
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <label for="inputAuthor3" class="col-sm-2 col-form-label">Author</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputAuthor3" placeholder="Enter Author Name">
+            </div>
+        </div>
+        <br>
+        <fieldset class="form-group row">
+            <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Fiction" checked>
+                    <label class="form-check-label" for="gridRadios1">
+                        Fiction
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Dystopian">
+                    <label class="form-check-label" for="gridRadios2">
+                        Dystopian
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Classic">
+                    <label class="form-check-label" for="gridRadios3">
+                        Classic
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="Adventure">
+                    <label class="form-check-label" for="gridRadios4">
+                        Adventure
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        <br>
+        <button type="submit" class="btn btn-primary" id="addBookBtn">Add Book</button>
+    </form>
+
+    <br>
+
+    <!-- Table section -->
+    <section>
+        <h1>Your Books</h1>
+        <div class ="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
