@@ -2,11 +2,6 @@
 
 A web-based library management system that allows users to manage their books. Users can add new books, borrow, return, and delete books. It features a user-friendly interface and integrates with a JSON server for persistent storage.
 
-## Table of Contents
-
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
 
 ## Usage
 -Fill in the form to add a new book.
